@@ -1,0 +1,24 @@
+{
+  "categories": {
+    "0": {
+      "name": "funny",
+      "name_ru": "смешные"
+    },
+    "1": {
+      "name": "casual",
+      "name_ru": "обычные"
+    },
+    "2": {
+      "name": "ad",
+      "name_ru": "рекламные"
+    },
+    "3": {
+      "name": "sad",
+      "name_ru": "грустные"
+    },
+    "4": {
+      "name": "happy",
+      "name_ru": "счастливые"
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{ "blins":
+  [{
+    "text": "Hi there. I am first blin",
+    "location": {
+      "latitude": "10",
+      "longitude": "10"
+    },
+    "category": "funny"
+  },
+  {
+    "text": "I like riding bike",
+    "location": {
+      "latitude": "10",
+      "longitude": "10"
+    },
+    "category": "funny"
+  },
+  {
+    "text": "Nice shirts in our shop.",
+    "location": {
+      "latitude": "20",
+      "longitude": "20"
+    },
+    "category": "ad"
+  },
+  {
+    "text": "20% discount in our cafe",
+    "location": {
+      "latitude": "20",
+      "longitude": "20"
+    },
+    "category": "ad"
+  },
+  {
+    "text": "Road between malls is extremely bad",
+    "location": {
+      "latitude": "30",
+      "longitude": "30"
+    },
+    "category": "casual"
+  },
+  {
+    "text": "I just walking across street",
+    "location": {
+      "latitude": "30",
+      "longitude": "30"
+    },
+    "category": "casual"
+  },
+  {
+    "text": "I bought a new camera",
+    "location": {
+      "latitude": "40",
+      "longitude": "40"
+    },
+    "category": "happy"
+  },
+  {
+    "text": "I am riding skateboard right now",
+    "location": {
+      "latitude": "40",
+      "longitude": "40"
+    },
+    "category": "happy"
+  }
+  ]
+}
