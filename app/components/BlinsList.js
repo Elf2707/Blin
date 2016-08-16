@@ -6,6 +6,7 @@ import { View,
     Text,
     ListView,
     StyleSheet } from 'react-native';
+import * as Animatable from 'react-native-animatable';
 
 export default class BlinsList extends Component {
     constructor(props) {
@@ -36,11 +37,12 @@ export default class BlinsList extends Component {
         );
     }
 
-    renderBlinRow(blin) {
+    renderBlinRow(blin, row, index) {
         return (
-            <View style={styles.blin}>
+            <Animatable.View style={styles.blin}
+                             animation={(index % 2) ? 'fadeInRight' : 'fadeInLeft'}>
                 <Text>{blin.text}</Text>
-            </View>
+            </Animatable.View>
         );
     }
 }
