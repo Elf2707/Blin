@@ -13,3 +13,13 @@ export function fetchBlins() {
         });
     };
 }
+
+export function addBlin(blin) {
+    // Add blin
+    return (dispatch) => {
+        dispatch({
+            type: ActionTypes.ADD_BLIN,
+            payload: blin,
+        });
+    };
+}

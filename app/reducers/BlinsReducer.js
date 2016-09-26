@@ -13,6 +13,13 @@ export default function blinsReducer(state = initState, action) {
             return Object.assign({}, state, {
                 blins: action.payload,
             });
+
+        case ActionTypes.ADD_BLIN:
+            console.log('Add blin');
+            return Object.assign({}, state, {
+                blins: state.blins.concat(action.payload),
+            });
+
         default:
             return state;
     }

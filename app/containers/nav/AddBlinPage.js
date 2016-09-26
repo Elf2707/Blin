@@ -6,7 +6,8 @@ import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
 
 import * as CategoryActions from './../../actions/CategoryActions';
-import AddBlinForm from './../../components/AddBlinForm/AddBlinForm';
+import * as BlinsActions from './../../actions/BlinsActions';
+import AddBlinForm from './../../components/AddBlin';
 
 class AddBlinView extends Component {
     constructor(props) {
@@ -28,7 +29,7 @@ class AddBlinView extends Component {
         return (
             <AddBlinForm
                 categories={this.props.categories}
-                onAddBlin={this.handleAddBlin.bind(this)}/>
+                onAddBlin={this.props.addBlin}/>
         );
     }
 
@@ -36,10 +37,6 @@ class AddBlinView extends Component {
     }
 
     commonentDidMount() {
-    }
-
-    handleAddBlin() {
-        console.log('add blin');
     }
 }
 
@@ -52,6 +49,7 @@ const mapStateToProps = (state) => {
 const dispatchToProps = (dispatch) => {
     return {
         fetchCategories: () => dispatch(CategoryActions.fetchCategories()),
+        addBlin: (blin) => dispatch(BlinsActions.addBlin(blin)),
     };
 }
 
