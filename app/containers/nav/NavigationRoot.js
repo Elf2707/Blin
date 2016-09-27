@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Router, Scene, Reducer } from 'react-native-router-flux';
 
 import MainPage from './MainPage';
-import AddBlinPage from './AddBlinPage';
+import AddBlinPage from './AddTalkPage';
 import DimensionUtils from './../../utils/dimentionUtils';
 
 const reducerCreate = params => {
@@ -21,11 +21,11 @@ const getSceneStyle = function (props, computedProps) { // eslint-disable-line n
         shadowOffset: null,
         shadowOpacity: null,
         shadowRadius: null,
-        backgroundColor: '#4AABF7',
+        backgroundColor: '#E6EAED',
     };
 
     if (computedProps.isActive) {
-        style.marginTop = computedProps.hideNavBar ? 0 : DimensionUtils.getHeightDimInPerc(11);
+        style.marginTop = computedProps.hideNavBar ? 0 : DimensionUtils.getHeightDimInPerc(12);
         style.marginBottom = computedProps.hideTabBar ? 0 : 50;
     }
     return style;
@@ -44,7 +44,7 @@ const navBarStyle = {
     alignItems: 'center',
     justifyContent: 'center',
     backgroundColor: '#4AABF7',
-    height: DimensionUtils.getHeightDimInPerc(11),
+    height: DimensionUtils.getHeightDimInPerc(12),
     borderWidth: 2,
     borderColor: 'cyan',
     borderBottomColor: '#4AABF7',

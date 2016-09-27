@@ -7,22 +7,21 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 
-import * as BlinsActions from './../../actions/BlinsActions';
+import * as TalksActions from './../../actions/TalksActions';
 import * as CategoryActions from './../../actions/CategoryActions';
-import BlinsList from './../../components/BlinsList';
+import TalksList from './../../components/TalksList';
 import DrawerMenu from './../main-menu/DrawerMenu';
 
 class MainView extends Component {
     componentWillMount() {
         this.props.fetchCategories();
-       // this.props.fetchBlins();
+        this.props.fetchTalks();
     }
 
     render() {
-        //<BlinsList blins={this.props.blins}/>
-
         return (
             <View>
+                <TalksList talks={this.props.talks}/>
                 <DrawerMenu />
             </View>
         );
@@ -31,13 +30,13 @@ class MainView extends Component {
 
 const mapStateToProps = (state) => {
     return {
-        blins: state.blinsReducer.blins,
+        talks: state.talksReducer.talks,
     };
 };
 
 const mapDispatchToProps = (dispatch) => {
     return bindActionCreators({
-        ...BlinsActions,
+        ...TalksActions,
         ...CategoryActions,
     }, dispatch);
 };

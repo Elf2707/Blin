@@ -6,8 +6,8 @@ import { connect } from 'react-redux';
 import { View, Text } from 'react-native';
 
 import * as CategoryActions from './../../actions/CategoryActions';
-import * as BlinsActions from './../../actions/BlinsActions';
-import AddBlinForm from './../../components/AddBlin';
+import * as BlinsActions from './../../actions/TalksActions';
+import AddBlinForm from './../../components/AddTalk';
 
 class AddBlinView extends Component {
     constructor(props) {

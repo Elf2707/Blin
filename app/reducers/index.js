@@ -3,10 +3,10 @@
  */
 import { combineReducers } from 'redux';
 
-import categoriesReducer from './CategoriesReducer';
-import blinsReducer from './BlinsReducer';
+import categoriesReducer from './categoriesReducer';
+import talksReducer from './talksReducer';
 
 export default combineReducers({
     categoriesReducer,
-    blinsReducer,
+    talksReducer,
 });

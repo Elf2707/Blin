@@ -62,6 +62,30 @@
       "longitude": "40"
     },
     "category": "happy"
-  }
+  },
+    {
+      "text": "I am riding skateboard right now1",
+      "location": {
+        "latitude": "40",
+        "longitude": "40"
+      },
+      "category": "happy"
+    },
+    {
+      "text": "I am riding skateboard right now2",
+      "location": {
+        "latitude": "40",
+        "longitude": "40"
+      },
+      "category": "happy"
+    },
+    {
+      "text": "I am riding skateboard right now3",
+      "location": {
+        "latitude": "40",
+        "longitude": "40"
+      },
+      "category": "happy"
+    }
   ]
 }

@@ -1,23 +1,22 @@
 /**
  * Created by Elf on 15.08.2016.
  */
-import * as ActionTypes from './../constants/BlinsActionsType';
+import * as ActionTypes from './../constants/TalksActionsType';
 
 const initState = {
-    blins: [],
+    talks: [],
 }
 
 export default function blinsReducer(state = initState, action) {
     switch(action.type) {
-        case ActionTypes.FETCH_BLINS:
+        case ActionTypes.FETCH_TALKS:
             return Object.assign({}, state, {
-                blins: action.payload,
+                talks: action.payload,
             });
 
-        case ActionTypes.ADD_BLIN:
-            console.log('Add blin');
+        case ActionTypes.ADD_TALK:
             return Object.assign({}, state, {
-                blins: state.blins.concat(action.payload),
+                talks: state.talks.concat(action.payload),
             });
 
         default:

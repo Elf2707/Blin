@@ -1,4 +1,4 @@
-package com.blin;
+package com.talksaround;
 
 import android.app.Application;
 import android.util.Log;
