@@ -9,7 +9,7 @@ const initialState = {
 
 export default function categoriesReducer(state = initialState, action) {
     switch (action.type) {
-        case types.FETCH_CATEGORIES:
+        case types.CATEGORIES_FETCHED:
             const categories = Object.values(action.payload).map(value => value);
 
             return Object.assign({}, state, { categories });

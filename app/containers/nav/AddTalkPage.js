@@ -3,40 +3,18 @@
  */
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 import { View, Text } from 'react-native';
 
-import * as CategoryActions from './../../actions/CategoryActions';
-import * as BlinsActions from './../../actions/TalksActions';
-import AddBlinForm from './../../components/AddTalk';
+import AddTalk from './../../components/AddTalk';
 
-class AddBlinView extends Component {
-    constructor(props) {
-        super(props);
-
-        console.log(this.props)
-        this.props.fetchCategories();
-    }
-
+class AddTalkPage extends Component {
     render() {
-        if (!this.props.categories) {
-            return (
-                <View>
-                    <Text>Loading...</Text>
-                </View>
-            );
-        }
-
         return (
-            <AddBlinForm
-                categories={this.props.categories}
-                onAddBlin={this.props.addBlin}/>
+            <AddTalk
+                categories={[]}
+                onAddBlin={null}/>
         );
-    }
-
-    componentWillMount() {
-    }
-
-    commonentDidMount() {
     }
 }
 
@@ -46,13 +24,9 @@ const mapStateToProps = (state) => {
     };
 }
 
-const dispatchToProps = (dispatch) => {
-    return {
-        fetchCategories: () => dispatch(CategoryActions.fetchCategories()),
-        addBlin: (blin) => dispatch(BlinsActions.addBlin(blin)),
-    };
-}
+const mapDispatchToProps = (dispatch) => {
+    return {};
+};
 
-const AddBlinPage = connect(mapStateToProps, dispatchToProps)(AddBlinView);
+export default connect(mapStateToProps, mapDispatchToProps)(AddTalkPage);
 
-export default AddBlinPage;

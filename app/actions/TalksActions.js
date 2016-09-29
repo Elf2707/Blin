@@ -1,17 +1,13 @@
 /**
  * Created by Elf on 14.08.2016.
  */
-import * as ActionTypes from './../constants/TalksActionsType';
-import blins from './../../data/blins.json';
+import * as ActionTypes from './../constants/TalksActionsTypes';
 
-export function fetchTalks() {
-    // Get talks
-    return (dispatch) => {
-        dispatch({
-            type: ActionTypes.FETCH_TALKS,
-            payload: blins.blins,
-        });
-    };
+export function startWatchTalks() {
+    return ({
+        type: ActionTypes.START_WATCH_TALKS,
+        payload: null,
+    });
 }
 
 export function addTalk(talk) {

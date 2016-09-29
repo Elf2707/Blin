@@ -1,15 +1,15 @@
 /**
  * Created by Elf on 15.08.2016.
  */
-import * as ActionTypes from './../constants/TalksActionsType';
+import * as ActionTypes from './../constants/TalksActionsTypes';
 
 const initState = {
-    talks: [],
+    talks: null,
 }
 
-export default function blinsReducer(state = initState, action) {
+export default function talksReducer(state = initState, action) {
     switch(action.type) {
-        case ActionTypes.FETCH_TALKS:
+        case ActionTypes.TALKS_FETCHED:
             return Object.assign({}, state, {
                 talks: action.payload,
             });

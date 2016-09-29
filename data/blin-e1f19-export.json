@@ -1,0 +1,101 @@
+{
+  "categories" : [ {
+    "color" : "#FF4081",
+    "name" : "funny",
+    "name_ru" : "смешные"
+  }, {
+    "color" : "#4AABF7",
+    "name" : "casual",
+    "name_ru" : "обычные"
+  }, {
+    "color" : "#CDDC39",
+    "name" : "ad",
+    "name_ru" : "рекламные"
+  }, {
+    "color" : "#673AB7",
+    "name" : "sad",
+    "name_ru" : "грустные"
+  }, {
+    "color" : "#FF2752",
+    "name" : "happy",
+    "name_ru" : "счастливые"
+  } ],
+  "talks" : [ {
+    "category" : "funny",
+    "location" : {
+      "latitude" : "10",
+      "longitude" : "10"
+    },
+    "text" : "Hi there. I am first blin"
+  }, {
+    "category" : "funny",
+    "location" : {
+      "latitude" : "10",
+      "longitude" : "10"
+    },
+    "text" : "I like riding bike"
+  }, {
+    "category" : "ad",
+    "location" : {
+      "latitude" : "20",
+      "longitude" : "20"
+    },
+    "text" : "Nice shirts in our shop."
+  }, {
+    "category" : "ad",
+    "location" : {
+      "latitude" : "20",
+      "longitude" : "20"
+    },
+    "text" : "20% discount in our cafe"
+  }, {
+    "category" : "casual",
+    "location" : {
+      "latitude" : "30",
+      "longitude" : "30"
+    },
+    "text" : "Road between malls is extremely bad"
+  }, {
+    "category" : "casual",
+    "location" : {
+      "latitude" : "30",
+      "longitude" : "30"
+    },
+    "text" : "I just walking across street"
+  }, {
+    "category" : "happy",
+    "location" : {
+      "latitude" : "40",
+      "longitude" : "40"
+    },
+    "text" : "I bought a new camera"
+  }, {
+    "category" : "happy",
+    "location" : {
+      "latitude" : "40",
+      "longitude" : "40"
+    },
+    "text" : "I am riding skateboard right now"
+  }, {
+    "category" : "sad",
+    "location" : {
+      "latitude" : "40",
+      "longitude" : "40"
+    },
+    "text" : "I am riding skateboard right now1"
+  }, {
+    "category" : "sad",
+    "location" : {
+      "latitude" : "40",
+      "longitude" : "40"
+    },
+    "text" : "I am riding skateboard right now2"
+  }, {
+    "category" : "casual",
+    "location" : {
+      "latitude" : "40",
+      "longitude" : "40"
+    },
+    "text" : "I am riding skateboard right now3"
+  } ]
+}

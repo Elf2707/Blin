@@ -6,11 +6,15 @@ import { View,
     Text,
     ListView,
     StyleSheet } from 'react-native';
-import * as Animatable from 'react-native-animatable';
 
 import DimensionUtils from './../utils/dimentionUtils';
+import Talk from './Talk';
 
 export default class TalksList extends Component {
+    static propTypes = {
+        talks: React.PropTypes.array.isRequired,
+    };
+
     constructor(props) {
         super(props);
 
@@ -35,17 +39,16 @@ export default class TalksList extends Component {
                           dataSource={this.state.dataSource}
                           renderRow={this.renderTalkRow}
                           renderSeparator={this.renderSeparator}
-                          enableEmptySections={true}/>
+                          enableEmptySections={true}
+                          showsVerticalScrollIndicator={false}/>
             </View>
         );
     }
 
     renderTalkRow(talk, rowId, index) {
         return (
-            <Animatable.View style={styles.talk}
-                             animation={(index % 2) ? 'fadeInRight' : 'fadeInLeft'}>
-                <Text>{talk.text}</Text>
-            </Animatable.View>
+            <Talk talk={talk}
+                  index={parseInt(index)}/>
         );
     }
 
@@ -69,18 +72,8 @@ const styles = StyleSheet.create({
         padding: 10,
     },
 
-    talk: {
-        backgroundColor: '#FFF',
-        padding: 5,
-        height: DimensionUtils.getHeightDimInPerc(10),
-    },
-
     separator: {
         height: 1,
         backgroundColor: '#E6EAED',
-    }
+    },
 });
-
-TalksList.propsTypes = {
-    talks: React.PropTypes.array.isRequired,
-};

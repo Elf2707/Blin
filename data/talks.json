@@ -1,4 +1,27 @@
-{ "blins":
+{  "categories": {
+    "0": {
+      "name": "funny",
+      "name_ru": "смешные"
+    },
+    "1": {
+      "name": "casual",
+      "name_ru": "обычные"
+    },
+    "2": {
+      "name": "ad",
+      "name_ru": "рекламные"
+    },
+    "3": {
+      "name": "sad",
+      "name_ru": "грустные"
+    },
+    "4": {
+      "name": "happy",
+      "name_ru": "счастливые"
+    }
+  },
+  
+  "talks":
   [{
     "text": "Hi there. I am first blin",
     "location": {
@@ -69,7 +92,7 @@
         "latitude": "40",
         "longitude": "40"
       },
-      "category": "happy"
+      "category": "casual"
     },
     {
       "text": "I am riding skateboard right now2",
@@ -77,7 +100,7 @@
         "latitude": "40",
         "longitude": "40"
       },
-      "category": "happy"
+      "category": "sad"
     },
     {
       "text": "I am riding skateboard right now3",

@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 import { Router, Scene, Reducer } from 'react-native-router-flux';
 
 import MainPage from './MainPage';
-import AddBlinPage from './AddTalkPage';
+import AddTalkPage from './AddTalkPage';
 import DimensionUtils from './../../utils/dimentionUtils';
 
 const reducerCreate = params => {
@@ -35,9 +35,7 @@ const titleStyle = {
     fontSize: DimensionUtils.getHeightDimInPerc(5),
     fontFamily: 'animated',
     color: 'white',
-    borderWidth: 2,
-    borderColor: 'green',
-    marginTop: DimensionUtils.getHeightDimInPerc(3.8),
+    marginTop: DimensionUtils.getHeightDimInPerc(4.2),
 };
 
 const navBarStyle = {
@@ -45,8 +43,6 @@ const navBarStyle = {
     justifyContent: 'center',
     backgroundColor: '#4AABF7',
     height: DimensionUtils.getHeightDimInPerc(12),
-    borderWidth: 2,
-    borderColor: 'cyan',
     borderBottomColor: '#4AABF7',
 };
 
@@ -75,9 +71,9 @@ export default class App extends Component {
                         hideNavBar={false} />
 
                     <Scene
-                        key="addBlin"
-                        component={AddBlinPage}
-                        title="Add Blin"
+                        key="addTalk"
+                        component={AddTalkPage}
+                        title="Add Talk"
                         titleStyle={titleStyle} />
                 </Scene>
             </Router>
