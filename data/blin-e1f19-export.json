@@ -26,6 +26,7 @@
       "latitude" : "10",
       "longitude" : "10"
     },
+    "rating" : 10,
     "text" : "Hi there. I am first blin"
   }, {
     "category" : "funny",
@@ -33,6 +34,7 @@
       "latitude" : "10",
       "longitude" : "10"
     },
+    "rating" : 5,
     "text" : "I like riding bike"
   }, {
     "category" : "ad",
@@ -40,6 +42,7 @@
       "latitude" : "20",
       "longitude" : "20"
     },
+    "rating" : 11,
     "text" : "Nice shirts in our shop."
   }, {
     "category" : "ad",
@@ -47,6 +50,7 @@
       "latitude" : "20",
       "longitude" : "20"
     },
+    "rating" : 3,
     "text" : "20% discount in our cafe"
   }, {
     "category" : "casual",
@@ -54,6 +58,7 @@
       "latitude" : "30",
       "longitude" : "30"
     },
+    "rating" : 3,
     "text" : "Road between malls is extremely bad"
   }, {
     "category" : "casual",
@@ -61,6 +66,7 @@
       "latitude" : "30",
       "longitude" : "30"
     },
+    "rating" : 12,
     "text" : "I just walking across street"
   }, {
     "category" : "happy",
@@ -68,6 +74,7 @@
       "latitude" : "40",
       "longitude" : "40"
     },
+    "rating" : 5,
     "text" : "I bought a new camera"
   }, {
     "category" : "happy",
@@ -75,6 +82,7 @@
       "latitude" : "40",
       "longitude" : "40"
     },
+    "rating" : 8,
     "text" : "I am riding skateboard right now"
   }, {
     "category" : "sad",
@@ -82,6 +90,7 @@
       "latitude" : "40",
       "longitude" : "40"
     },
+    "rating" : 3,
     "text" : "I am riding skateboard right now1"
   }, {
     "category" : "sad",
@@ -89,6 +98,7 @@
       "latitude" : "40",
       "longitude" : "40"
     },
+    "rating" : 10,
     "text" : "I am riding skateboard right now2"
   }, {
     "category" : "casual",
@@ -96,6 +106,7 @@
       "latitude" : "40",
       "longitude" : "40"
     },
+    "rating" : 1,
     "text" : "I am riding skateboard right now3"
   } ]
 }

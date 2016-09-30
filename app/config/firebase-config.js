@@ -9,5 +9,4 @@ const firebaseConfig = {
     storageBucket: 'blin-e1f19.appspot.com',
 };
 
-
 export default firebaseConfig;

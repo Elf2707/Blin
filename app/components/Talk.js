@@ -7,9 +7,9 @@ import { View,
     TouchableHighlight,
     StyleSheet } from 'react-native';
 import * as Animatable from 'react-native-animatable';
-import Badge from 'react-native-smart-badge';
 
 import DimensionUtils from './../utils/dimentionUtils';
+import BadgeRating from './BadgeRating';
 
 export default class Talk extends Component {
     static propTypes = {
@@ -18,19 +18,22 @@ export default class Talk extends Component {
     };
 
     render() {
+        let flagColor = this.getTalkFlagStyle();
         return (
-            <Animatable.View style={[styles.talk, this.getTalkFlagColor()]}
+            <Animatable.View style={[styles.talk, flagColor]}
                              animation={(this.props.index % 2) ? 'fadeInRight' : 'fadeInLeft'}
                              duration={400}>
                 <Text style={styles.talkText}
                       ellipsizeMode={'tail'}
                       numberOfLines={4}>{this.props.talk.text}</Text>
-                <Badge style={styles.badge}>10</Badge>
+
+                <BadgeRating rating={this.props.talk.rating} />
+
             </Animatable.View>
         );
     }
 
-    getTalkFlagColor() {
+    getTalkFlagStyle() {
         switch (this.props.talk.category) {
             case 'casual':
                 var flagColor = '#4AABF7';
@@ -67,7 +70,6 @@ export default class Talk extends Component {
 const styles = StyleSheet.create({
     talk: {
         backgroundColor: '#FFF',
-        padding: 8,
         height: DimensionUtils.getHeightDimInPerc(12),
         flexDirection: 'row',
         justifyContent: 'space-between',
@@ -77,8 +79,4 @@ const styles = StyleSheet.create({
     talkText: {
         color: 'orange',
     },
-
-    badge: {
-        backgroundColor: '#4AABF7',
-    }
 });
