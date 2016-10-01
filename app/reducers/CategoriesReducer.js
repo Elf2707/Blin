@@ -4,15 +4,15 @@
 import * as types from './../constants/CategoriesActionsTypes';
 
 const initialState = {
-    categories: [],
+    categories: null,
 };
 
 export default function categoriesReducer(state = initialState, action) {
     switch (action.type) {
         case types.CATEGORIES_FETCHED:
-            const categories = Object.values(action.payload).map(value => value);
-
-            return Object.assign({}, state, { categories });
+            return Object.assign({}, state, {
+                categories: action.payload,
+            });
 
         default:
             return state;

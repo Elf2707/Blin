@@ -14,8 +14,10 @@ import DrawerMenu from './../main-menu/DrawerMenu';
 
 class MainPage extends Component {
     componentWillMount() {
-        //  this.props.startWatchCategories();
+        // Start sagas to work
+        this.props.startWatchCategories();
         this.props.startWatchTalks();
+
     }
 
     render() {
@@ -30,7 +32,7 @@ class MainPage extends Component {
     }
 
     renderTaskList() {
-        if (!this.props.talks) {
+        if (!this.props.talks || !this.props.categories) {
             return (
                 <ActivityIndicator color={'#4AABF7'}
                                    animating={true}
@@ -39,7 +41,17 @@ class MainPage extends Component {
         }
 
         return (
-            <TalksList talks={this.props.talks}/>
+            <View>
+                <TalksList talks={this.props.talks}
+                           categories={this.props.categories}/>
+                <DrawerLayoutAndroid
+                    drawerWidth={300}
+                    drawerPosition={DrawerLayoutAndroid.positions.Left}
+                    renderNavigationView={this.renderContent.bind(this)}
+                    ref={(drawer) => {
+                    this.drawer = drawer;
+                }}/>
+            </View>
         );
     }
 }
@@ -47,6 +59,7 @@ class MainPage extends Component {
 const mapStateToProps = (state) => {
     return {
         talks: state.talksReducer.talks,
+        categories: state.categoriesReducer.categories,
     };
 };
 

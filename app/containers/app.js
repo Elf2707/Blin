@@ -9,13 +9,13 @@ import createSagaMiddleware from 'redux-saga';
 import NavigationRoot from './nav/NavigationRoot';
 import reducer from './../reducers';
 import * as categorySaga from './../sagas/categoriesSagas';
-import * as talksSaga from './../sagas/talksSagas';
+import rootSaga from './../sagas/rootSaga';
 
 // Note: this API requires redux@>=3.1.0
 const sagaMiddleware = createSagaMiddleware();
 const store = createStore(reducer, applyMiddleware(sagaMiddleware));
 
-sagaMiddleware.run(talksSaga.startWatchTalks);
+sagaMiddleware.run(rootSaga);
 
 export default class App extends Component {
     render() {

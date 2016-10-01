@@ -34,7 +34,7 @@ const createTalksDbChannel = () => {
     });
 };
 
-export function* startWatchTalks() {
+export default function* startWatchTalks() {
 
     const talksDbChannel = yield call(createTalksDbChannel)
 
