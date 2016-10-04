@@ -1,0 +1,7 @@
+/**
+ * Created by Elf on 04.09.2016.
+ */
+export const ADD_LOCATION = 'SAVE_LOCATION';
+export const REMOVE_LOCATION = 'REMOVE_LOCATION';
+export const SAVE_LOCATIONS_TO_DB = 'SAVE_LOCATIONS_TO_DB';
+export const GET_LOCATIONS_FROM_DB = 'GET_LOCATIONS_FROM_DB';

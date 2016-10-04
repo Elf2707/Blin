@@ -20,6 +20,7 @@ export default class TalksList extends Component {
         super(props);
 
         this.ds = new ListView.DataSource({rowHasChanged: (r1, r2) => r1 !== r2});
+
         this.state = {
             dataSource: this.ds.cloneWithRows(this.props.talks),
         };
@@ -50,25 +51,19 @@ export default class TalksList extends Component {
         return (
             <Talk talk={talk}
                   index={parseInt(index)}
-                  categoryFlagColor={this.getCategoryFlagColor(talk.category)}  />
+                  categoryFlagColor={this.getCategoryFlagColor(talk.category)}/>
         );
     }
 
     renderSeparator(sectionID, rowId, adjacentRowHighlighted) {
         return (
             <View key={rowId}
-                  style={styles.separator} />
+                  style={styles.separator}/>
         );
     }
 
     getCategoryFlagColor(categoryName) {
-        const category = this.props.categories.find((category) => {
-            if(category.name === categoryName) {
-                return true;
-            } else {
-                return false;
-            }
-        });
+        const category = this.props.categories.find((category) => category.name === categoryName);
 
         return category.color;
     }
@@ -78,8 +73,9 @@ const styles = StyleSheet.create({
     container: {
         alignItems: 'stretch',
         justifyContent: 'flex-start',
-        padding: 10,
-        height: DimensionUtils.getHeightDimInPerc(88),
+        padding: 8,
+        paddingBottom: 1,
+        height: DimensionUtils.getHeightDimInPerc(80), // 12% nav bar + 8% tabbar
     },
 
     listContainer: {

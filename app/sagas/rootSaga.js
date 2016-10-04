@@ -3,10 +3,12 @@
  */
 import startWatchTalks from './talksSagas';
 import startWatchCategories from './categoriesSagas';
+import startWatchLocations from './locationSagas';
 
 export default function* rootSaga() {
     yield [
         startWatchTalks(),
-        startWatchCategories()
+        startWatchCategories(),
+        startWatchLocations(),
     ];
 };

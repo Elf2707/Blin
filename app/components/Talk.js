@@ -46,6 +46,7 @@ const styles = StyleSheet.create({
     },
 
     talkText: {
-        color: '#212121',
+        fontFamily: 'roboto_reg',
+        color: '#555555',
     },
 });

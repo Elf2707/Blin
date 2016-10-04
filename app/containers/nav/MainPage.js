@@ -10,7 +10,6 @@ import { Actions } from 'react-native-router-flux';
 import * as TalksActions from './../../actions/TalksActions';
 import * as CategoryActions from './../../actions/CategoryActions';
 import TalksList from './../../components/TalksList';
-import DrawerMenu from './../main-menu/DrawerMenu';
 
 class MainPage extends Component {
     componentWillMount() {
@@ -21,37 +20,22 @@ class MainPage extends Component {
     }
 
     render() {
-        return (
-            <View style={{
+        if (!this.props.talks || !this.props.categories) {
+            return (
+                <View style={{
                     flex: 1,
                     justifyContent: 'center',
                 }}>
-                {this.renderTaskList()}
-            </View>
-        );
-    }
-
-    renderTaskList() {
-        if (!this.props.talks || !this.props.categories) {
-            return (
-                <ActivityIndicator color={'#4AABF7'}
-                                   animating={true}
-                                   size="large"/>
+                    <ActivityIndicator color={'#4AABF7'}
+                                       animating={true}
+                                       size="large"/>
+                </View>
             )
         }
 
         return (
-            <View>
-                <TalksList talks={this.props.talks}
-                           categories={this.props.categories}/>
-                <DrawerLayoutAndroid
-                    drawerWidth={300}
-                    drawerPosition={DrawerLayoutAndroid.positions.Left}
-                    renderNavigationView={this.renderContent.bind(this)}
-                    ref={(drawer) => {
-                    this.drawer = drawer;
-                }}/>
-            </View>
+            <TalksList talks={this.props.talks}
+                       categories={this.props.categories}/>
         );
     }
 }

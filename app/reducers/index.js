@@ -5,8 +5,10 @@ import { combineReducers } from 'redux';
 
 import categoriesReducer from './categoriesReducer';
 import talksReducer from './talksReducer';
+import locationsReducer from './locationsReducer';
 
 export default combineReducers({
     categoriesReducer,
     talksReducer,
+    locationsReducer,
 });
