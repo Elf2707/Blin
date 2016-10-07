@@ -18,16 +18,11 @@ export default class Talk extends Component {
     };
 
     render() {
-        let categoryFlag = {
-            borderLeftWidth: 5,
-            borderLeftColor: this.props.categoryFlagColor,
-        };
-
         return (
-            <Animatable.View style={[styles.container, categoryFlag]}
+            <Animatable.View style={styles.container}
                              animation={(this.props.index % 2) ? 'fadeInRight' : 'fadeInLeft'}
                              duration={400}>
-                <Text style={styles.talkText}
+                <Text style={[styles.talkText, {color: this.props.categoryFlagColor}]}
                       ellipsizeMode={'tail'}
                       numberOfLines={4}>{this.props.talk.text}</Text>
             </Animatable.View>
@@ -42,11 +37,13 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding: 8,
+        borderRadius: 10,
+        padding: 10,
     },
 
     talkText: {
         fontFamily: 'roboto_reg',
+        fontSize: DimensionUtils.getHeightDimInPerc(3),
         color: '#555555',
     },
 });

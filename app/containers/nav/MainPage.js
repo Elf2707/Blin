@@ -28,7 +28,7 @@ class MainPage extends Component {
                 }}>
                     <ActivityIndicator color={'#4AABF7'}
                                        animating={true}
-                                       size="large"/>
+                                       size={'large'} />
                 </View>
             )
         }
