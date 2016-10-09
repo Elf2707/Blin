@@ -13,7 +13,7 @@ import LocationsList from './LocationsList';
 
 export default class ChooseLocationView extends Component {
     static propTypes = {
-        savedLocations: React.PropTypes.array.isRequired,
+        savedLocations: React.PropTypes.array,
         pickUpLocation: React.PropTypes.func.isRequired,
         setCurrentLocation: React.PropTypes.func.isRequired,
         removeLocation: React.PropTypes.func.isRequired,
@@ -29,7 +29,7 @@ export default class ChooseLocationView extends Component {
                 <View style={styles.currLocation}>
                     <TouchableHighlight style={styles.currLocBtn}
                                         onPress={() => this.props.setCurrentLocation()}
-                                        underlayColor={'rgba(0, 0, 0, 0.2)'}>
+                                        underlayColor={'rgba(74, 171, 247, 0.2)'}>
                         <Text style={styles.text3per}>CURRENT LOCATION</Text>
                     </TouchableHighlight>
                 </View>
@@ -39,16 +39,18 @@ export default class ChooseLocationView extends Component {
     }
 
     renderSavedLocationsList() {
-        if(this.props.savedLocations || this.props.savedLocations.length === 0) {
-            return (
-                <LocationsList style={styles.locationsList}
-                               locations={this.props.savedLocations}
-                               isShowRowDelBtns={true}
-                               onRowTap={this.props.pickUpLocation}
-                               onDelBtnTap={this.props.removeLocation}
-                               detailInfo={false}/>
-            );
+        if (!this.props.savedLocations || this.props.savedLocations.length === 0) {
+            return null;
         }
+
+        return (
+            <LocationsList style={styles.locationsList}
+                           locations={this.props.savedLocations}
+                           isShowRowDelBtns={true}
+                           onRowTap={this.props.pickUpLocation}
+                           onDelBtnTap={this.props.removeLocation}
+                           detailInfo={false}/>
+        );
     }
 }
 
@@ -78,8 +80,8 @@ const styles = StyleSheet.create({
 
     text3per: {
         fontSize: DimensionUtils.getHeightDimInPerc(3),
-        color: '#555',
+        color: '#1976D2',
         fontWeight: '300',
-        fontFamily: (Platform.OS === 'ios') ? 'System': 'roboto_reg'
+        fontFamily: (Platform.OS === 'ios') ? 'System' : 'roboto_reg'
     },
 });

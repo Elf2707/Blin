@@ -44,7 +44,7 @@ export default class LocationsList extends Component {
         return (
             <TouchableHighlight key={rowIndex}
                                 onPress={this._handleRowTap.bind(this, location)}
-                                underlayColor={'rgba(255, 255, 255, 0.4)'}>
+                                underlayColor={'rgba(4A, AB, F7, 0.4)'}>
                 {this.renderRowDetailFullInfo(location, rowIndex)}
             </TouchableHighlight>
         );

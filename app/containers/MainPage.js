@@ -7,9 +7,9 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { Actions } from 'react-native-router-flux';
 
-import * as TalksActions from './../../actions/TalksActions';
-import * as CategoryActions from './../../actions/CategoryActions';
-import TalksList from './../../components/TalksList';
+import * as TalksActions from './../actions/TalksActions';
+import * as CategoryActions from './../actions/CategoryActions';
+import TalksList from './../components/TalksList';
 
 class MainPage extends Component {
     componentWillMount() {

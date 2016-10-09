@@ -4,12 +4,18 @@
 import * as ActionTypes from './../constants/LocationActionTypes';
 
 const initState = {
-    savedLocations: [],
+    deviceLocation: null,
+    savedLocations: null,
 };
 
 export default function savedLocationsReducer(state = initState, action) {
     switch(action.type) {
-        case ActionTypes.GET_LOCATIONS_FROM_DB:
+        case ActionTypes.DEVICE_LOCATION_DETECTED:
+            return Object.assign({}, state, {
+                deviceLocation: action.payload
+            });
+
+        case ActionTypes.SAVED_LOCATIONS_FETCHED:
             return Object.assign({}, state, {
                 savedLocations: action.payload
             });

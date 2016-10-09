@@ -4,8 +4,8 @@
 import * as ActionTypes from './../constants/CategoriesActionsTypes';
 
 export function startWatchCategories() {
-    return ({
+    return {
         type: ActionTypes.START_WATCH_CATEGORIES,
         payload: null,
-    });
+    };
 }

@@ -3,14 +3,14 @@
  */
 import React, { Component } from 'react';
 import { Actions, Router, Scene, Reducer, TabBar, Modal } from 'react-native-router-flux';
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from '../../node_modules/react-native-vector-icons/MaterialIcons';
 
 import MainPage from './MainPage';
 import AddTalkPage from './AddTalkPage';
-import ChooseLocation from './../ChooseLocation';
-import LocationPickUpMap from './../../components/LocationPickUpMap';
-import TabView from './../../components/TabView';
-import DimensionUtils from './../../utils/dimentionUtils';
+import ChooseLocation from './ChooseLocation';
+import LocationPickUpMap from './LocationPickUpMap';
+import TabView from './../components/TabView';
+import DimensionUtils from './../utils/dimentionUtils';
 
 const reducerCreate = params => {
     const defaultReducer = Reducer(params); // eslint-disable-line new-cap
@@ -49,8 +49,10 @@ const navBarStyle = {
 };
 
 const tabBarStyle = {
-    backgroundColor: '#4AABF7',
     height: DimensionUtils.getHeightDimInPerc(8),
+    backgroundColor: '#FFF',
+    borderTopWidth: 1,
+    borderTopColor: '#4AABF7',
 };
 
 const backButtonStyle = {
@@ -76,11 +78,12 @@ const rightButtonTextStyle = {
 };
 
 const getTabBarIcon = (iconName) => {
+    //color={this.props.selected ? '#FF5722' :'#4AABF7'} />;
     return class extends Component {
         render() {
             return <Icon name={iconName}
                          size={DimensionUtils.getHeightDimInPerc(4.8)}
-                         color={this.props.selected ? '#FF5722' :'#FFF'} />;
+                         color={this.props.selected ? '#4AABF7' :'#DDD'} />;
         }
     };
 };
@@ -121,6 +124,7 @@ export default class App extends Component {
                                leftButtonStyle={backButtonStyle}
                                backButtonImage={require('TalksAround/app/assets/icons/ic_chevron_left.png')}
                                leftButtonIconStyle={backButtonIconStyle}
+                               hideTabBar={true}
                                rightTitle={'Save'}
                                onRight={()=>{Actions.pop();}}
                                rightButtonStyle={rightButtonStyle}

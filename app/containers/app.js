@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux';
 import createSagaMiddleware from 'redux-saga';
 
-import NavigationRoot from './nav/NavigationRoot';
+import NavigationRoot from './NavigationRoot';
 import reducer from './../reducers';
 import * as categorySaga from './../sagas/categoriesSagas';
 import rootSaga from './../sagas/rootSaga';

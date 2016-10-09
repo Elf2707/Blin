@@ -1,4 +1,4 @@
 <resources>
-
     <string name="app_name">Talks Around</string>
+    <string name="MAPS_API_KEY">AIzaSyD8-9mLjPivZ1fuli-gTZKTmphBDqTjUl8</string>
 </resources>

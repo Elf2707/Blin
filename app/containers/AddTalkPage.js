@@ -6,7 +6,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import { View, Text } from 'react-native';
 
-import AddTalk from './../../components/AddTalk';
+import AddTalk from './../components/AddTalk';
 
 class AddTalkPage extends Component {
     render() {
