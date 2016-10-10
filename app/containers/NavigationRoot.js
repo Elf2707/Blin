@@ -56,13 +56,16 @@ const tabBarStyle = {
 };
 
 const backButtonStyle = {
-    height: DimensionUtils.getHeightDimInPerc(10),
-    paddingLeft: 15,
+    height: DimensionUtils.getHeightDimInPerc(8),
+    width: DimensionUtils.getWidthDimInPerc(30),
+    justifyContent: 'flex-start',
+    alignItems: 'center',
+    paddingLeft: 10,
 };
 
 const backButtonIconStyle = {
     height: DimensionUtils.getHeightDimInPerc(7),
-    width: DimensionUtils.getWidthDimInPerc(7),
+    width: DimensionUtils.getWidthDimInPerc(4),
 };
 
 const rightButtonStyle = {
@@ -72,7 +75,7 @@ const rightButtonStyle = {
     justifyContent: 'center',
 };
 
-const rightButtonTextStyle = {
+const navButtonTextStyle = {
     fontSize: DimensionUtils.getHeightDimInPerc(2.8),
     color: '#FFF',
 };
@@ -116,19 +119,17 @@ export default class App extends Component {
                                rightTitle={'Add'}
                                onRight={()=>{Actions.addLocation();}}
                                rightButtonStyle={rightButtonStyle}
-                               rightButtonTextStyle={rightButtonTextStyle}/>
+                               rightButtonTextStyle={navButtonTextStyle}/>
 
                         <Scene key="addLocation"
                                component={LocationPickUpMap}
                                title="Add Location"
+                               backTitle={'Locations'}
+                               backButtonTextStyle={navButtonTextStyle}
                                leftButtonStyle={backButtonStyle}
                                backButtonImage={require('TalksAround/app/assets/icons/ic_chevron_left.png')}
                                leftButtonIconStyle={backButtonIconStyle}
-                               hideTabBar={true}
-                               rightTitle={'Save'}
-                               onRight={()=>{Actions.pop();}}
-                               rightButtonStyle={rightButtonStyle}
-                               rightButtonTextStyle={rightButtonTextStyle} />
+                               hideTabBar={true} />
                     </Scene>
 
                     <Scene key="tab4"

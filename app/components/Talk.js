@@ -14,7 +14,7 @@ export default class Talk extends Component {
     static propTypes = {
         talk: React.PropTypes.object.isRequired,
         index: React.PropTypes.number.isRequired,
-        categoryFlagColor: React.PropTypes.string.isRequired,
+        category: React.PropTypes.object.isRequired,
     };
 
     render() {
@@ -22,9 +22,14 @@ export default class Talk extends Component {
             <Animatable.View style={styles.container}
                              animation={(this.props.index % 2) ? 'fadeInRight' : 'fadeInLeft'}
                              duration={400}>
-                <Text style={[styles.talkText, {color: this.props.categoryFlagColor}]}
-                      ellipsizeMode={'tail'}
-                      numberOfLines={4}>{this.props.talk.text}</Text>
+                <View style={[styles.talkHeader, {backgroundColor: this.props.category.color, opacity: 1}]}>
+                </View>
+
+                <View style={styles.talkContentContainer}>
+                    <Text style={styles.talkText}
+                          ellipsizeMode={'tail'}
+                          numberOfLines={4}>{this.props.talk.text}</Text>
+                </View>
             </Animatable.View>
         );
     }
@@ -34,16 +39,35 @@ const styles = StyleSheet.create({
     container: {
         backgroundColor: '#FFF',
         height: DimensionUtils.getHeightDimInPerc(12),
-        flexDirection: 'row',
-        justifyContent: 'center',
-        alignItems: 'center',
+        justifyContent: 'flex-start',
+        alignItems: 'stretch',
+        borderBottomLeftRadius: DimensionUtils.getHeightDimInPerc(2),
+        borderBottomRightRadius: DimensionUtils.getHeightDimInPerc(2),
+        borderTopLeftRadius: DimensionUtils.getHeightDimInPerc(1),
+        borderTopRightRadius: DimensionUtils.getHeightDimInPerc(1),
+        padding: 0,
+    },
+
+    talkHeader: {
         borderRadius: DimensionUtils.getHeightDimInPerc(2),
-        padding: 10,
+        height: DimensionUtils.getHeightDimInPerc(1),
+        alignItems: 'center',
+        justifyContent: 'center',
+    },
+
+    talkHeaderText: {
+        fontSize: DimensionUtils.getHeightDimInPerc(1.8),
+        color: '#FFF',
+    },
+
+    talkContentContainer: {
+        paddingLeft: 15,
+        paddingTop: 8,
     },
 
     talkText: {
         fontFamily: 'roboto_reg',
-        fontSize: DimensionUtils.getHeightDimInPerc(3),
-        color: '#555555',
+        fontSize: DimensionUtils.getHeightDimInPerc(2.5),
+        color: '#707070',
     },
 });

@@ -4,5 +4,7 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimaryDark">#1976D2</item>
+        <item name="colorAccent">#1976D2</item>
+        <item name="android:textCursorDrawable">@drawable/cursor_white</item>
     </style>
 </resources>

@@ -51,7 +51,7 @@ export default class TalksList extends Component {
         return (
             <Talk talk={talk}
                   index={parseInt(index)}
-                  categoryFlagColor={this.getCategoryFlagColor(talk.category)}/>
+                  category={this.getTalkCategory(talk.category)}/>
         );
     }
 
@@ -62,10 +62,10 @@ export default class TalksList extends Component {
         );
     }
 
-    getCategoryFlagColor(categoryName) {
+    getTalkCategory(categoryName) {
         const category = this.props.categories.find((category) => category.name === categoryName);
 
-        return category.color;
+        return category;
     }
 }
 
@@ -83,7 +83,7 @@ const styles = StyleSheet.create({
     },
 
     separator: {
-        height: DimensionUtils.getHeightDimInPerc(0.5),
+        height: DimensionUtils.getHeightDimInPerc(1),
         backgroundColor: '#E6EAED',
     },
 });
